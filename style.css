@@ -11,6 +11,12 @@ body
     height: 48px;
 }
 
+.logo
+{
+	width: 400px;
+	height: 64px;
+}
+
 .welcome > h1
 {
     font-family: helvetica, arial, sans-serif;
@@ -25,11 +31,18 @@ body
 	margin-bottom: 1.5em;
 }
 
-.menu > a
+.menu > p > a
 {
     text-decoration: none;
-    font-size: 1.5em;
-    color: black;
+}
+
+.menu
+{
+	display: table-cell;
+	vertical-align: middle;
+	font-family: georgia;
+	font-size: 18px;
+	height: 64px;
 }
 
 .bar > h1

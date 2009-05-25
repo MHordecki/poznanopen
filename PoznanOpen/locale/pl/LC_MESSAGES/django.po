@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-05-25 16:02-0500\n"
+"POT-Creation-Date: 2009-05-25 17:07-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -738,44 +738,139 @@ msgid ""
 "Poznań, near all major transit junctions."
 msgstr "Poznań Open jest ulokowane nieopodal centrum, blisko Dworca Głównego."
 
-#: poznanopen/templates/index.html:31 poznanopen/templates/index.html.py:42
-#: poznanopen/templates/index.html:47
+#: poznanopen/templates/index.html:30 poznanopen/templates/index.html.py:39
+#: poznanopen/templates/index.html:44
 msgid "More.."
 msgstr "Więcej.."
 
-#: poznanopen/templates/index.html:34
+#: poznanopen/templates/index.html:33
 msgid "Schedule"
 msgstr "Harmonogram"
 
-#: poznanopen/templates/index.html:35
+#: poznanopen/templates/index.html:34
 msgid "We're in the process of finalizing our schedule. Stay tuned!"
 msgstr ""
-"Jesteśmy w trakcie finalizowania naszego harmonogramu. Więcej informacji wkrótce."
+"Jesteśmy w trakcie finalizowania naszego harmonogramu. Więcej informacji "
+"wkrótce."
 
-#: poznanopen/templates/index.html:39
+#: poznanopen/templates/index.html:37
 msgid "Gallery"
 msgstr "Galeria"
 
-#: poznanopen/templates/index.html:40
+#: poznanopen/templates/index.html:38
 msgid "In the meanwhile, enjoy photos from Poznan Open 08."
 msgstr "Obejrzyj zdjęcia z pierwszej edycji - Poznań Open 08!"
 
-#: poznanopen/templates/index.html:45
+#: poznanopen/templates/index.html:42
 msgid "News"
 msgstr "Nowości"
 
-#: poznanopen/templates/index.html:46
+#: poznanopen/templates/index.html:43
 msgid "Welcome to the newly opened, official website of Poznań Open 09."
 msgstr "Witajcie na świeżo otwartej stronie Poznań Open 09."
+
+#: poznanopen/templates/registration.html:3 poznanopen/templates/skel.html:24
+msgid "Registration"
+msgstr "Rejestracja"
+
+#: poznanopen/templates/registration.html:6
+msgid "Full name:"
+msgstr "Imię i nazwisko:"
+
+#: poznanopen/templates/registration.html:10
+msgid "Bithdate: "
+msgstr "Data urodzenia:"
+
+#: poznanopen/templates/registration.html:32
+msgid "City:"
+msgstr "Miasto:"
+
+#: poznanopen/templates/registration.html:36
+msgid "Country:"
+msgstr "Kraj:"
+
+#: poznanopen/templates/registration.html:40
+msgid "WCA i.d. (optional):"
+msgstr "ID WCA (opcjonalne):"
+
+#: poznanopen/templates/registration.html:44
+msgid "E-mail (optional):"
+msgstr "E-mail (opcjonalne):"
+
+#: poznanopen/templates/registration.html:48
+msgid "Events:"
+msgstr "Uczestnictwo w:"
+
+#: poznanopen/templates/registration.html:50
+msgid "Rubik's Cube"
+msgstr "Kostka Rubika"
+
+#: poznanopen/templates/registration.html:51
+msgid "Rubik's Cube one-handed"
+msgstr "Kostka Rubika jedną ręką"
+
+#: poznanopen/templates/registration.html:52
+msgid "Rubik's Cube blindfolded"
+msgstr "Kostka Rubika blindfolded"
+
+#: poznanopen/templates/registration.html:53
+msgid "Rubik's Cube Fewest-Moves"
+msgstr "Najmniejsza liczba ruchów"
+
+#: poznanopen/templates/registration.html:57
+msgid "2&times;2&times;2 Cube"
+msgstr "Kostka 2&times;2&times;2"
+
+#: poznanopen/templates/registration.html:58
+msgid "4&times;4&times;4 Cube"
+msgstr "Kostka 4&times;4&times;4"
+
+#: poznanopen/templates/registration.html:59
+msgid "5&times;5&times;5 Cube"
+msgstr "Kostka 5&times;5&times;5"
+
+#: poznanopen/templates/registration.html:60
+msgid "6&times;6&times;6 Cube"
+msgstr "Kostka 6&times;6&times;6"
+
+#: poznanopen/templates/registration.html:61
+msgid "7&times;7&times;7 Cube"
+msgstr "Kostka 7&times;7&times;7"
+
+#: poznanopen/templates/registration.html:64
+msgid "Square-1"
+msgstr ""
+
+#: poznanopen/templates/registration.html:65
+msgid "Pyraminx"
+msgstr ""
+
+#: poznanopen/templates/registration.html:66
+msgid "Megaminx"
+msgstr ""
+
+#: poznanopen/templates/registration.html:67
+msgid "Rubik's Clock"
+msgstr ""
+
+#: poznanopen/templates/registration.html:74
+msgid ""
+"\n"
+"        In case your are aged 17 or less, you need your parents' (or lawful "
+"guardian) written consent to compete in\n"
+"        Poznan Open 09. You can use the template below:\n"
+"        <blockquote>\n"
+"            Gimme my son all the trophies, bastards!\n"
+"        </blockquote>\n"
+"        "
+msgstr ""
 
 #: poznanopen/templates/skel.html:3
 msgid ""
 "Poznan Open 09 - Open Poznan Championships in Speedsolving the Rubik's Cube"
-msgstr "Poznań Open 09 - Otwarte Mistrzostwa Miasta Poznania w układaniu Kostki Rubika"
-
-#: poznanopen/templates/skel.html:24
-msgid "Registration"
-msgstr "Rejestracja"
+msgstr ""
+"Poznań Open 09 - Otwarte Mistrzostwa Miasta Poznania w układaniu Kostki "
+"Rubika"
 
 #: poznanopen/templates/skel.html:27
 msgid "Sponsors"

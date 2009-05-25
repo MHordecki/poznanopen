@@ -16,5 +16,6 @@ urlpatterns = auth_patterns + patterns('',
 #        kwargs={'form_class': UserRegistrationForm},
 #        name='registration_register'),
     (r'^$', 'poznanopen.views.index'),
+    (r'^registration$', 'poznanopen.views.registration'),
 
 ) + urlpatterns

@@ -60,3 +60,19 @@ a
 	color: #356AA0;
 	text-decoration: none;
 }
+
+.header > h1
+{
+    font-size: 200%;
+    margin-bottom: 1.5em;
+}
+
+.form_caption
+{
+    text-align: right;
+}
+
+.form_spacing
+{
+    height: 1em;
+}
