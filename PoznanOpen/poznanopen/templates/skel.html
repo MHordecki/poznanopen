@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <title>{% trans "Poznan Open 09 - Open Poznan Championships in Speedsolving the Rubik's Cube" %}</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="Poznań Open 09 - Otwarte Mistrzostwa Miasta Poznania w układaniu Kostki Rubika" />
+	<meta name="author" content="Michal Hordecki" />
+	<meta name="keywords" content="Poznań,Open,09,Poznań Open,Kostka Rubika,Rubik's Cube,Rubik,Mistrzostwa" />
+
+	<link rel="stylesheet" media="screen" type="text/css" href="media/960.css" />
+	<link rel="stylesheet" media="screen" type="text/css" href="media/text.css" />
+	<link rel="stylesheet" media="screen" type="text/css" href="media/style.css" />
+</head>
+<body>
+<div class="container_16">
+	<div class="grid_16 topspace">&nbsp;</div>
+	<div class="clear">&nbsp;</div>
+
+    	<div class="grid_7"><img src="/media/drawing.png" class="logo" /></div>
+	<div class="grid_1">&nbsp;</div>
+	<div class="grid_2 menu"><p>
+        {% ifequal page "home" %}{% trans "Home" %}{% else %}<a href="/">{% trans "Home" %}</a>{% endifequal %}
+		</p></div>
+        <div class="grid_2 menu"><p>
+            {% ifequal page "registration" %}{% trans "Registration" %}{% else %}<a href="/registration">{% trans "Registration" %}</a>{% endifequal %}
+		</p></div>
+            <div class="grid_2 menu"><p>
+                {% ifequal page "sponsors" %}{% trans "Sponsors" %}{% else %}<a href="/sponsors">{% trans "Sponsors" %}</a>{% endifequal %}
+		</p></div>
+            <div class="grid_2 menu"><p>
+                {% ifequal page "contact" %}{% trans "Contact" %}{% else %}<a href="/contact">{% trans "Contact" %}</a>{% endifequal %}
+		</p></div>
+
+	<div class="clear midspace">&nbsp;</div>
+
+{% block content %}
+{% endblock %}
+</div>
+	
+
+</body>
+
+</html>
+

@@ -1,0 +1,47 @@
+{% extends 'skel.html' %}
+{% block content %}
+	<div class="grid_5">&nbsp;</div>
+	<div class="grid_2">&nbsp;</div>
+	<div class="grid_9 welcome">
+        <h1>{% trans "It's the second edition!" %}</h1>
+        <p>
+        {% blocktrans %}
+        Meet us at Poznań Open 09, where the greatest Polish speedcubers will compete for the title of Poznań's Champion in speedsolving the Rubik's Cube. Just imagine the sheer speed and blazing emotions this involves! You cannot miss such a chance! This year, there's two times the fun - come to VIII Liceum Ogólnokształcące in Poznań, 27-28th of June, 2009!
+
+        {% endblocktrans %}
+        </p>
+       <!-- 
+			Spotkaj się z najlepszymi polskimi speedcuberami w zbliżających się
+			Mistrzostwach Poznania w układaniu Kostki Rubika Poznań Open 09! Zobacz, jak <b>to</b> się robi w
+			kilkanaście sekund! W tym roku dwa razy więcej zabawy - wpadnij w
+            weekend 27-28 czerwca do auli VIII Liceum Ogólnokształcącego w Poznaniu.
+            -->
+
+		<p>
+        {% trans "Registration open as soon as 31th of December" %}
+		</p>
+	</div>
+
+	<div class="clear lowspace">&nbsp;</div>
+
+	<div class="grid_4 bar">
+        <h1><a href="/venue">{% trans "Venue" %}</a></h1>
+        <p>{% trans "Poznań Open 09 is held in really convenient venue - in the very heart of Poznań, near all major transit junctions." %}</p>
+        <p class="more"><a href="/venue">{% trans "More.." %}</a></p>
+	</div>
+	<div class="grid_4 bar">
+        <h1>{% trans "Schedule" %}</h1>
+        <p>{% trans "We're in the process of finalizing our schedule. Stay tuned!" %}</p>
+	</div>
+	<div class="grid_4 bar">
+        <h1><a href="/gallery">{% trans "Gallery" %}</a></h1>
+        <p>{% trans "In the meanwhile, enjoy photos from Poznan Open 08." %}</p>
+        <p class="more"><a href="/gallery">{% trans "More.." %}</a></p>
+	</div>
+	<div class="grid_4 bar">
+        <h1><a href="/news">{% trans "News" %}</a></h1>
+        <p>{% trans "Welcome to the newly opened, official website of Poznań Open 09." %}</p>
+        <p class="more"><a href="/news/rusza-oficjalna-strona-poznan-open-09">{% trans "More.." %}</a></p>
+	</div>
+
+{% endblock %}

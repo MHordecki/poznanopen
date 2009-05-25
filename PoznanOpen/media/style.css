@@ -1,0 +1,62 @@
+
+body
+{
+    font-family: georgia, serif;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.topspace, .midspace, .lowspace
+{
+    height: 48px;
+}
+
+.logo
+{
+	width: 400px;
+	height: 64px;
+}
+
+.welcome > h1
+{
+    font-family: helvetica, arial, sans-serif;
+    letter-spacing: -2px;
+    font-size: 48px;
+    margin-bottom: 1em;
+    color: #C00;
+}
+
+.welcome > p
+{
+	margin-bottom: 1.5em;
+}
+
+.menu > p > a
+{
+    text-decoration: none;
+}
+
+.menu
+{
+	display: table-cell;
+	vertical-align: middle;
+	font-family: georgia;
+	font-size: 18px;
+	height: 64px;
+}
+
+.bar > h1
+{
+	margin-bottom: 1.5em;
+}
+
+.bar > h1 > a
+{
+	color: black;
+}
+
+a
+{
+	color: #356AA0;
+	text-decoration: none;
+}
