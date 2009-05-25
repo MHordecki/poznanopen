@@ -1,0 +1,49 @@
+
+body
+{
+    font-family: georgia, serif;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.topspace, .midspace, .lowspace
+{
+    height: 48px;
+}
+
+.welcome > h1
+{
+    font-family: helvetica, arial, sans-serif;
+    letter-spacing: -2px;
+    font-size: 48px;
+    margin-bottom: 1em;
+    color: #C00;
+}
+
+.welcome > p
+{
+	margin-bottom: 1.5em;
+}
+
+.menu > a
+{
+    text-decoration: none;
+    font-size: 1.5em;
+    color: black;
+}
+
+.bar > h1
+{
+	margin-bottom: 1.5em;
+}
+
+.bar > h1 > a
+{
+	color: black;
+}
+
+a
+{
+	color: #356AA0;
+	text-decoration: none;
+}
