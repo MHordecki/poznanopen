@@ -1,70 +1,120 @@
 {% extends "skel.html" %}
 {% block content %}
+<form action="/registration" method="post">
 <div class="grid_12 header"><h1>{% trans "Registration" %}</h1></div>
 <div class="clear">&nbsp;</div>
 
+{{ form.fullname.errors }}
+
 <div class="grid_3 form_caption">{% trans "Full name:" %}</div>
-<div class="grid_13 form_entry"><input name="fullname" /></div>
+<div class="grid_13 form_entry">{{ form.fullname }}</div>
+{% if form.fullname.errors %}
+<div class="clear form_spacing_description">&nbsp;</div>
+<div class="grid_12 prefix_4 form_description">
+    {% for error in form.fullname.errors %}
+    <p class="form_error">{{ error }}</p>
+{% endfor %}
+</div>
+{% endif %}
 <div class="clear form_spacing">&nbsp;</div>
 
 <div class="grid_3 form_caption">{% trans "Bithdate: " %}</div>
 <div class="grid_13 form_entry">
-    <select name="birthyear">
-        {% for x in years %}
-        <option value="{{ x }}">{{ x }}</option>
-        {% endfor %}
-    </select>
-    /
-    <select name="birthmonth">
-        {% for x in months %}
-        <option value="{{ x }}">{{ x }}</option>
-        {% endfor %}
-    </select>
-    /
-    <select name="birthday">
-        {% for x in days %}
-        <option value="{{ x }}">{{ x }}</option>
-        {% endfor %}
-    </select>
+    {{ form.bornyear }} / {{ form.bornmonth }} / {{ form.bornday }}
 </div>
 <div class="clear form_spacing">&nbsp;</div>
 
 <div class="grid_3 form_caption">{% trans "City:" %}</div>
-<div class="grid_13 form_entry"><input name="city" /></div>
+<div class="grid_13 form_entry">{{ form.city }}</div>
+{% if form.fullname.errors %}
+<div class="clear form_spacing_description">&nbsp;</div>
+<div class="grid_12 prefix_4 form_description">
+    {% for error in form.fullname.errors %}
+    <p class="form_error">{{ error }}</p>
+{% endfor %}
+</div>
+{% endif %}
 <div class="clear form_spacing">&nbsp;</div>
 
 <div class="grid_3 form_caption">{% trans "Country:" %}</div>
-<div class="grid_13 form_entry"><input name="country" /></div>
+<div class="grid_13 form_entry">{{ form.country }}</div>
+{% if form.fullname.errors %}
+<div class="clear form_spacing_description">&nbsp;</div>
+<div class="grid_12 prefix_4 form_description">
+    {% for error in form.fullname.errors %}
+    <p class="form_error">{{ error }}</p>
+{% endfor %}
+</div>
+{% endif %}
 <div class="clear form_spacing">&nbsp;</div>
 
-<div class="grid_3 form_caption">{% trans "WCA i.d. (optional):" %}</div>
-<div class="grid_13 form_entry"><input name="wcaid" /></div>
+<div class="grid_3 form_caption">{% trans "WCA i.d.:" %}</div>
+<div class="grid_13 form_entry">{{ form.wcaid }}</div>
+<div class="clear form_spacing_description">&nbsp;</div>
+<div class="grid_12 prefix_4 form_description">
+    <p>
+{% blocktrans %}
+This field is optional. If you've competed in WCA-approved competitions before, you're likely to have your own
+WCA-id. You can then watch your stats on the World Cube Association's pages.
+{% endblocktrans %}
+    </p>
+</div>
 <div class="clear form_spacing">&nbsp;</div>
 
-<div class="grid_3 form_caption">{% trans "E-mail (optional):" %}</div>
-<div class="grid_13 form_entry"><input name="email" /></div>
+<div class="grid_3 form_caption">{% trans "E-mail:" %}</div>
+<div class="grid_13 form_entry">{{ form.email }}</div>
+<div class="clear form_spacing_description">&nbsp;</div>
+<div class="grid_12 prefix_4 form_description">
+{% if form.fullname.errors %}
+    {% for error in form.fullname.errors %}
+    <p class="form_error">{{ error }}</p>
+{% endfor %}
+{% endif %}
+    <p>
+{% blocktrans %}
+This field is optional. If you're willing in our accomodation offer (see below), it is
+mandratory, though.
+{% endblocktrans %}
+    </p>
+</div>
+<div class="clear form_spacing">&nbsp;</div>
+
+<div class="grid_3 form_caption">{% trans "Accomodation:" %}</div>
+<div class="grid_13 form_entry">{{ form.accomodation }}</div>
+<div class="clear form_spacing_description">&nbsp;</div>
+<div class="grid_12 prefix_4 form_description">
+    <p>
+{% blocktrans %}
+Lots of people will probably search for accomodation for the time of the competition.
+We can suggest an excellent <a href="http://www.artesya.pl/">Artesya Hotel</a> with reasonable
+prices. If you like, we can order a place for you, with a possible discount. If you express
+an interest in this offer, we will contact you by e-mail a few weeks before Poznan Open 09,
+in order to consult further details.
+{% endblocktrans %}
+    </p>
+</div>
 <div class="clear form_spacing">&nbsp;</div>
 
 <div class="grid_3 form_caption">{% trans "Events:" %}</div>
 <div class="grid_4 event_entry">
-    <p><input type="checkbox" name="ev_333"/> {% trans "Rubik's Cube" %}</p>
-    <p><input type="checkbox" name="ev_333oh"/> {% trans "Rubik's Cube one-handed" %}</p>
-    <p><input type="checkbox" name="ev_333bld"/> {% trans "Rubik's Cube blindfolded" %}</p>
-    <p><input type="checkbox" name="ev_333fm"/> {% trans "Rubik's Cube Fewest-Moves" %}</p>
+    <p>{{ form.ev_333 }}{% trans "Rubik's Cube" %}</p>
+    <p>{{ form.ev_333oh }}{% trans "Rubik's Cube one-handed" %}</p>
+    <p>{{ form.ev_333bld }}{% trans "Rubik's Cube blindfolded" %}</p>
+    <p>{{ form.ev_333fm }}{% trans "Rubik's Cube Fewest-Moves" %}</p>
 </div>
 
 <div class="grid_4 event_entry">
-    <p><input type="checkbox" name="ev_222"/> {% trans "2&times;2&times;2 Cube" %}</p>
-    <p><input type="checkbox" name="ev_444"/> {% trans "4&times;4&times;4 Cube" %}</p>
-    <p><input type="checkbox" name="ev_555"/> {% trans "5&times;5&times;5 Cube" %}</p>
-    <p><input type="checkbox" name="ev_666"/> {% trans "6&times;6&times;6 Cube" %}</p>
-    <p><input type="checkbox" name="ev_777"/> {% trans "7&times;7&times;7 Cube" %}</p>
+    <p>{{ form.ev_222 }}{% trans "2&times;2&times;2 Cube" %}</p>
+    <p>{{ form.ev_444 }}{% trans "4&times;4&times;4 Cube" %}</p>
+    <p>{{ form.ev_555 }}{% trans "5&times;5&times;5 Cube" %}</p>
+    <p>{{ form.ev_666 }}{% trans "6&times;6&times;6 Cube" %}</p>
+    <p>{{ form.ev_777 }}{% trans "7&times;7&times;7 Cube" %}</p>
 </div>
 <div class="grid_4 event_entry">
-    <p><input type="checkbox" name="ev_sq1"/> {% trans "Square-1" %}</p>
-    <p><input type="checkbox" name="ev_pyr"/> {% trans "Pyraminx" %}</p>
-    <p><input type="checkbox" name="ev_minx"/> {% trans "Megaminx" %}</p>
-    <p><input type="checkbox" name="ev_clock"/> {% trans "Rubik's Clock" %}</p>
+    <p>{{ form.ev_sq1 }}{% trans "Square-1" %}</p>
+    <p>{{ form.ev_pyr }}{% trans "Pyraminx" %}</p>
+    <p>{{ form.ev_minx }}{% trans "Megaminx" %}</p>
+    <p>{{ form.ev_clock }}{% trans "Rubik's Clock" %}</p>
 </div>
 
 <div class="clear form_spacing">&nbsp;</div>
@@ -73,9 +123,8 @@
     <p>
         {% blocktrans %}
         In case your are aged 17 or less, you need your parents' (or lawful guardian) written consent to compete in
-        Poznan Open 09. You can use the template below:
+        Poznan Open 09.
         <blockquote>
-            Gimme my son all the trophies, bastards!
         </blockquote>
         {% endblocktrans %}
     </p>
@@ -83,5 +132,7 @@
 
 <div class="clear form_midspace">&nbsp;</div>
 <div class="grid_12">
-    <input type="submit" value="{% trans "Send your registration form" %}"/> {% trans "You will have the ability to change your registration data later." %}
+    <input type="submit" value="{% trans "Send your registration form" %}"/>
+</div>
+</form>
 {% endblock %}

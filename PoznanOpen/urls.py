@@ -17,5 +17,12 @@ urlpatterns = auth_patterns + patterns('',
 #        name='registration_register'),
     (r'^$', 'poznanopen.views.index'),
     (r'^registration$', 'poznanopen.views.registration'),
+    (r'^contact$', 'poznanopen.views.contact'),
+    (r'^news/(?P<id>\d+)/(.*)$', 'poznanopen.views.news'),
+    (r'^venue$', 'poznanopen.views.venue'),
+    (r'^sponsors$', 'poznanopen.views.sponsors'),
+#    (r'^schedule$', 'poznanopen.views.schedule'),
+    (r'^gallery$', 'poznanopen.views.gallery'),
+    (r'^thanks$', 'poznanopen.views.thanks'),
 
 ) + urlpatterns

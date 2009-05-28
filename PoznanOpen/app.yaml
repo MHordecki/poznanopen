@@ -7,5 +7,9 @@ handlers:
 - url: /media
   static_dir: media
 
+#- url: /admin/.*
+#  script: common/appenginepatch/main_admin.py
+#  login: admin
+
 - url: /.*
   script: common/appenginepatch/main.py

@@ -4,6 +4,7 @@ body
     font-family: georgia, serif;
     font-size: 16px;
     line-height: 24px;
+    margin-bottom: 100px;
 }
 
 .topspace, .midspace, .lowspace
@@ -76,3 +77,18 @@ a
 {
     height: 1em;
 }
+
+.form_description, .form_error
+{
+    font-size: 12px;
+    color: #444;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+.form_error
+{
+    color: red;
+}
+
+

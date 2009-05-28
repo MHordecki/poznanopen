@@ -1,0 +1,20 @@
+{% extends "skel.html" %}
+{% block content %}
+<div class="grid_12">
+    <h1>{% trans "Venue" %}</h1>
+    <p>
+    {% trans "Poznan Open 09 is held at:" %}
+    <blockquote>
+        VIII Liceum Ogólnokształcące<br />
+        ul. Głogowska 92<br />
+        20-696 Poznań
+    </blockquote>
+    </p>
+
+    <h1>{% trans "Map" %}</h1>
+    <p>
+    <small><a href="http://maps.google.com/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=110117852800132414813.00045690ec134daae86bb&amp;ll=52.402602,16.905513&amp;spn=0.01071,0.014849&amp;source=embed" style="color:#0000FF;text-align:left">[larger map]</a></small><br/>
+    <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=110117852800132414813.00045690ec134daae86bb&amp;ll=52.402602,16.905513&amp;spn=0.01071,0.014849&amp;output=embed"></iframe>
+    </p>
+</div>
+{% endblock %}
