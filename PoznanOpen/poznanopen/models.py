@@ -15,6 +15,7 @@ class Form(db.Model):
     wcaid = db.StringProperty()
     born = db.DateProperty()
     email = db.StringProperty()
+    nick = db.StringProperty()
 
     events = db.StringListProperty()
 
@@ -33,6 +34,7 @@ class RegistrationForm(forms.Form):
     city = forms.CharField(required = True)
     wcaid = forms.CharField(required = False)
     email = forms.EmailField(required = False)
+    nick = forms.CharField(required = False)
 
     ev_333 = forms.BooleanField(required = False)
     ev_333oh = forms.BooleanField(required = False)

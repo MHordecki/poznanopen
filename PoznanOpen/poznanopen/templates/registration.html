@@ -16,6 +16,10 @@
 {% endfor %}
 </div>
 {% endif %}
+
+<div class="clear form_spacing">&nbsp;</div>
+<div class="grid_3 form_caption">{% trans "Your nick:" %}</div>
+<div class="grid_13 form_entry">{{ form.nick }}</div>
 <div class="clear form_spacing">&nbsp;</div>
 
 <div class="grid_3 form_caption">{% trans "Bithdate: " %}</div>
@@ -26,10 +30,10 @@
 
 <div class="grid_3 form_caption">{% trans "City:" %}</div>
 <div class="grid_13 form_entry">{{ form.city }}</div>
-{% if form.fullname.errors %}
+{% if form.city.errors %}
 <div class="clear form_spacing_description">&nbsp;</div>
 <div class="grid_12 prefix_4 form_description">
-    {% for error in form.fullname.errors %}
+    {% for error in form.city.errors %}
     <p class="form_error">{{ error }}</p>
 {% endfor %}
 </div>
@@ -38,10 +42,10 @@
 
 <div class="grid_3 form_caption">{% trans "Country:" %}</div>
 <div class="grid_13 form_entry">{{ form.country }}</div>
-{% if form.fullname.errors %}
+{% if form.country.errors %}
 <div class="clear form_spacing_description">&nbsp;</div>
 <div class="grid_12 prefix_4 form_description">
-    {% for error in form.fullname.errors %}
+{% for error in form.country.errors %}
     <p class="form_error">{{ error }}</p>
 {% endfor %}
 </div>
@@ -65,8 +69,8 @@ WCA-id. You can then watch your stats on the World Cube Association's pages.
 <div class="grid_13 form_entry">{{ form.email }}</div>
 <div class="clear form_spacing_description">&nbsp;</div>
 <div class="grid_12 prefix_4 form_description">
-{% if form.fullname.errors %}
-    {% for error in form.fullname.errors %}
+{% if form.email.errors %}
+    {% for error in form.email.errors %}
     <p class="form_error">{{ error }}</p>
 {% endfor %}
 {% endif %}

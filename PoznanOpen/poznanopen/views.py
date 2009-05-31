@@ -4,6 +4,7 @@ from django.utils.translation import ugettext as _
 from django.shortcuts import render_to_response
 from models import News, Form, RegistrationForm
 from google.appengine.api import users
+from google.appengine.ext import db
 from django.conf import settings
 from ragendja.auth.decorators import staff_only
 import datetime
@@ -24,7 +25,7 @@ def registration(request):
             model.email = data['email']
             model.accomodation = data['accomodation']
             model.born = datetime.date(int(data['bornyear']), int(data['bornmonth']), int(data['bornday']))
-            model.events = [str(ev) for ev in data if ev.startswith('ev_')]
+            model.events = [str(ev) for ev in data if ev.startswith('ev_') and data[ev] == True]
             model.status = 1
             model.put()
 
@@ -63,6 +64,25 @@ def sponsors(request):
 
 def thanks(request):
     return render_to_response('thanks.html', {'page': 'thanks'})
+
+class Mapper:
+    def __init__(self, model):
+        self.model = model
+
+    def __getattr__(self, attr):
+        if attr == '__getitem__':
+            return None
+        if attr.startswith('ev_'):
+            return attr in self.model.events
+        else:
+            return getattr(self.model, attr)
+
+def competitors(request):
+    query = (Mapper(x) for x in db.GqlQuery("SELECT * FROM poznanopen_form WHERE status = 2"))
+
+    return render_to_response('competitors.html', {'competitors': query})
+
+    
 
 
 

@@ -1,0 +1,50 @@
+{% extends "skel.html" %}
+{% block content %}
+<div class="grid_16">
+    <h1>{% trans "Competitors" %}</h1>
+
+    <p>
+    <table>
+        <tr>
+            <th>{% trans "Full name" %}</th>
+            <th>{% trans "City" %}</th>
+            <th>{% trans "Country" %}</th>
+            <th>{% trans "WCA" %}</th>
+            <th>{% trans "3x3x3" %}</th>
+            <th>{% trans "3x3x3 OH" %}</th>
+            <th>{% trans "3x3x3 BLD" %}</th>
+            <th>{% trans "3x3x3 FM" %}</th>
+            <th>{% trans "2x2x2" %}</th>
+            <th>{% trans "4x4x4" %}</th>
+            <th>{% trans "5x5x5" %}</th>
+            <th>{% trans "6x6x6" %}</th>
+            <th>{% trans "7x7x7" %}</th>
+            <th>{% trans "sq1" %}</th>
+            <th>{% trans "pyr" %}</th>
+            <th>{% trans "minx" %}</th>
+        </tr>
+        {% for competitor in competitors %}
+        <tr>
+            <td>{{ competitor.fullname }}</td>
+            <td>{{ competitor.city }}</td>
+            <td>{{ competitor.country }}</td>
+            <td>{% if competitor.wcaid %}<a href="wca://{{ competitor.wcaid }}">WCA</a>{% else %}-{% endif %}</td>
+            <td>{% if competitor.ev_333 %}X{% endif %}</td>
+            <td>{% if competitor.ev_333oh %}X{% endif %}</td>
+            <td>{% if competitor.ev_333bld %}X{% endif %}</td>
+            <td>{% if competitor.ev_333fm %}X{% endif %}</td>
+            <td>{% if competitor.ev_222 %}X{% endif %}</td>
+            <td>{% if competitor.ev_444 %}X{% endif %}</td>
+            <td>{% if competitor.ev_555 %}X{% endif %}</td>
+            <td>{% if competitor.ev_666 %}X{% endif %}</td>
+            <td>{% if competitor.ev_777 %}X{% endif %}</td>
+            <td>{% if competitor.ev_sq1 %}X{% endif %}</td>
+            <td>{% if competitor.ev_pyr %}X{% endif %}</td>
+            <td>{% if competitor.ev_minx %}X{% endif %}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </p>
+    
+    </div>
+{% endblock %}

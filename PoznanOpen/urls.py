@@ -24,5 +24,6 @@ urlpatterns = auth_patterns + patterns('',
 #    (r'^schedule$', 'poznanopen.views.schedule'),
     (r'^gallery$', 'poznanopen.views.gallery'),
     (r'^thanks$', 'poznanopen.views.thanks'),
+    (r'^competitors$', 'poznanopen.views.competitors'),
 
 ) + urlpatterns
