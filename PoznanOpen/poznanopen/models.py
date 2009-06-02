@@ -16,6 +16,7 @@ class Form(db.Model):
     born = db.DateProperty()
     email = db.StringProperty()
     nick = db.StringProperty()
+    tshirt = db.StringProperty()
 
     events = db.StringListProperty()
 
@@ -28,6 +29,8 @@ class RegistrationForm(forms.Form):
     bornday = forms.ChoiceField(choices = zip(range(1, 32), range(1, 32)))
     bornmonth = forms.ChoiceField(choices = zip(range(1, 13), range(1, 13)))
     bornyear = forms.ChoiceField(choices = zip(range(1900, 2009), range(1900, 2009)))
+
+    tshirt = forms.ChoiceField(choices = (('S', 'S'), ('M', 'M'), ('L', 'L'), ('XL', 'XL')))
 
     fullname = forms.CharField(required = True)
     country = forms.CharField(required = True)

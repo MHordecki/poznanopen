@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-05-25 17:07-0500\n"
+"POT-Creation-Date: 2009-06-01 14:38-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -79,6 +79,7 @@ msgstr ""
 #: common/django_aep_export/django_templates/templates/admin/change_form.html:17
 #: common/django_aep_export/django_templates/templates/admin/change_list.html:8
 #: common/django_aep_export/django_templates/templates/admin/delete_confirmation.html:6
+#: common/django_aep_export/django_templates/templates/admin/delete_selected_confirmation.html:6
 #: common/django_aep_export/django_templates/templates/admin/invalid_setup.html:4
 #: common/django_aep_export/django_templates/templates/admin/object_history.html:6
 #: common/django_aep_export/django_templates/templates/admin/auth/user/change_password.html:10
@@ -110,6 +111,15 @@ msgstr ""
 msgid ""
 "There's been an error. It's been reported to the site administrators via e-"
 "mail and should be fixed shortly. Thanks for your patience."
+msgstr ""
+
+#: common/django_aep_export/django_templates/templates/admin/actions.html:4
+msgid "Run the selected action"
+msgstr ""
+
+#: common/django_aep_export/django_templates/templates/admin/actions.html:4
+#: common/django_aep_export/django_templates/templates/admin/search_form.html:8
+msgid "Go"
 msgstr ""
 
 #: common/django_aep_export/django_templates/templates/admin/app_index.html:10
@@ -209,7 +219,27 @@ msgid ""
 msgstr ""
 
 #: common/django_aep_export/django_templates/templates/admin/delete_confirmation.html:28
+#: common/django_aep_export/django_templates/templates/admin/delete_selected_confirmation.html:33
 msgid "Yes, I'm sure"
+msgstr ""
+
+#: common/django_aep_export/django_templates/templates/admin/delete_selected_confirmation.html:9
+msgid "Delete multiple objects"
+msgstr ""
+
+#: common/django_aep_export/django_templates/templates/admin/delete_selected_confirmation.html:15
+#, python-format
+msgid ""
+"Deleting the %(object_name)s would result in deleting related objects, but "
+"your account doesn't have permission to delete the following types of "
+"objects:"
+msgstr ""
+
+#: common/django_aep_export/django_templates/templates/admin/delete_selected_confirmation.html:22
+#, python-format
+msgid ""
+"Are you sure you want to delete the selected %(object_name)s objects? All of "
+"the following objects and it's related items will be deleted:"
 msgstr ""
 
 #: common/django_aep_export/django_templates/templates/admin/filter.html:2
@@ -287,10 +317,6 @@ msgstr ""
 
 #: common/django_aep_export/django_templates/templates/admin/pagination.html:10
 msgid "Show all"
-msgstr ""
-
-#: common/django_aep_export/django_templates/templates/admin/search_form.html:8
-msgid "Go"
 msgstr ""
 
 #: common/django_aep_export/django_templates/templates/admin/search_form.html:10
@@ -702,6 +728,95 @@ msgstr ""
 msgid "Email address"
 msgstr ""
 
+#: poznanopen/templates/competitors.html:4 poznanopen/templates/index.html:35
+msgid "Competitors"
+msgstr "Zawodnicy"
+
+#: poznanopen/templates/competitors.html:10
+msgid "Full name"
+msgstr "Imię i nazwisko"
+
+#: poznanopen/templates/competitors.html:11
+msgid "City"
+msgstr "Miasto"
+
+#: poznanopen/templates/competitors.html:12
+msgid "Country"
+msgstr "Kraj"
+
+#: poznanopen/templates/competitors.html:13
+msgid "WCA"
+msgstr "WCA"
+
+#: poznanopen/templates/competitors.html:14
+msgid "3x3x3"
+msgstr ""
+
+#: poznanopen/templates/competitors.html:15
+msgid "3x3x3 OH"
+msgstr ""
+
+#: poznanopen/templates/competitors.html:16
+msgid "3x3x3 BLD"
+msgstr ""
+
+#: poznanopen/templates/competitors.html:17
+msgid "3x3x3 FM"
+msgstr ""
+
+#: poznanopen/templates/competitors.html:18
+msgid "2x2x2"
+msgstr ""
+
+#: poznanopen/templates/competitors.html:19
+msgid "4x4x4"
+msgstr ""
+
+#: poznanopen/templates/competitors.html:20
+msgid "5x5x5"
+msgstr ""
+
+#: poznanopen/templates/competitors.html:21
+msgid "6x6x6"
+msgstr ""
+
+#: poznanopen/templates/competitors.html:22
+msgid "7x7x7"
+msgstr ""
+
+#: poznanopen/templates/competitors.html:23
+msgid "sq1"
+msgstr ""
+
+#: poznanopen/templates/competitors.html:24
+msgid "pyr"
+msgstr ""
+
+#: poznanopen/templates/competitors.html:25
+msgid "minx"
+msgstr ""
+
+#: poznanopen/templates/competitors.html:26
+msgid "clock"
+msgstr ""
+
+#: poznanopen/templates/competitors.html:53
+msgid "Summary"
+msgstr "Podsumowanie"
+
+#: poznanopen/templates/contact.html:4 poznanopen/templates/skel.html:30
+msgid "Contact"
+msgstr "Kontakt"
+
+#: poznanopen/templates/contact.html:6
+msgid ""
+"In case of any questions, doubts, or just plain curiosity, e-mail us at:"
+msgstr "W razie jakichkolwiek pytań skontaktuj się z organizatorem zawodów:"
+
+#: poznanopen/templates/gallery.html:4 poznanopen/templates/index.html:30
+msgid "Gallery"
+msgstr "Galeria"
+
 #: poznanopen/templates/index.html:6
 msgid "It's the second edition!"
 msgstr "To druga edycja"
@@ -710,10 +825,10 @@ msgstr "To druga edycja"
 msgid ""
 "\n"
 "        Meet us at Poznań Open 09, where the greatest Polish speedcubers "
-"will compete for the title of Poznań's Champion in speedsolving the Rubik's "
-"Cube. Just imagine the sheer speed and blazing emotions this involves! You "
-"cannot miss such a chance! This year, there's two times the fun - come to "
-"VIII Liceum Ogólnokształcące in Poznań, 27-28th of June, 2009!\n"
+"will compete for the trophy of Poznań's Rubik's Cube Champion! Just imagine "
+"the sheer speed and blazing emotions this involves! You cannot miss such an "
+"event! This year, there's two times the fun - come to VIII Liceum "
+"Ogólnokształcące in Poznań, 27-28th of June, 2009!\n"
 "\n"
 "        "
 msgstr ""
@@ -724,146 +839,178 @@ msgstr ""
 "wpadnij w weekend 27-28 czerwca do auli VIII Liceum Ogólnokształcącego w "
 "Poznaniu."
 
-#: poznanopen/templates/index.html:21
-msgid "Registration open as soon as 31th of December"
-msgstr "Rejestracja rozpoczyna się 1 czerwca"
+#: poznanopen/templates/index.html:14
+msgid "Registration starts tommorow, 1st of June!"
+msgstr "Rejestracja rozpoczyna się 1 czerwca!"
 
-#: poznanopen/templates/index.html:28
+#: poznanopen/templates/index.html:21 poznanopen/templates/venue.html:4
 msgid "Venue"
 msgstr "Dojazd"
 
-#: poznanopen/templates/index.html:29
+#: poznanopen/templates/index.html:22
 msgid ""
 "Poznań Open 09 is held in really convenient venue - in the very heart of "
 "Poznań, near all major transit junctions."
 msgstr "Poznań Open jest ulokowane nieopodal centrum, blisko Dworca Głównego."
 
-#: poznanopen/templates/index.html:30 poznanopen/templates/index.html.py:39
-#: poznanopen/templates/index.html:44
+#: poznanopen/templates/index.html:23 poznanopen/templates/index.html.py:32
+#: poznanopen/templates/index.html:37
 msgid "More.."
 msgstr "Więcej.."
 
-#: poznanopen/templates/index.html:33
+#: poznanopen/templates/index.html:26
 msgid "Schedule"
 msgstr "Harmonogram"
 
-#: poznanopen/templates/index.html:34
+#: poznanopen/templates/index.html:27
 msgid "We're in the process of finalizing our schedule. Stay tuned!"
 msgstr ""
 "Jesteśmy w trakcie finalizowania naszego harmonogramu. Więcej informacji "
 "wkrótce."
 
-#: poznanopen/templates/index.html:37
-msgid "Gallery"
-msgstr "Galeria"
-
-#: poznanopen/templates/index.html:38
+#: poznanopen/templates/index.html:31
 msgid "In the meanwhile, enjoy photos from Poznan Open 08."
 msgstr "Obejrzyj zdjęcia z pierwszej edycji - Poznań Open 08!"
 
-#: poznanopen/templates/index.html:42
-msgid "News"
-msgstr "Nowości"
+#: poznanopen/templates/index.html:36
+msgid "See who has registered so far."
+msgstr "Zobacz, kto się do tej pory zarejestrował."
 
-#: poznanopen/templates/index.html:43
-msgid "Welcome to the newly opened, official website of Poznań Open 09."
-msgstr "Witajcie na świeżo otwartej stronie Poznań Open 09."
-
-#: poznanopen/templates/registration.html:3 poznanopen/templates/skel.html:24
+#: poznanopen/templates/registration.html:4 poznanopen/templates/skel.html:24
 msgid "Registration"
 msgstr "Rejestracja"
 
-#: poznanopen/templates/registration.html:6
+#: poznanopen/templates/registration.html:9
 msgid "Full name:"
 msgstr "Imię i nazwisko:"
 
-#: poznanopen/templates/registration.html:10
+#: poznanopen/templates/registration.html:21
+msgid "Your nick:"
+msgstr "Pseudonim:"
+
+#: poznanopen/templates/registration.html:25
 msgid "Bithdate: "
 msgstr "Data urodzenia:"
 
-#: poznanopen/templates/registration.html:32
+#: poznanopen/templates/registration.html:31
 msgid "City:"
 msgstr "Miasto:"
 
-#: poznanopen/templates/registration.html:36
+#: poznanopen/templates/registration.html:43
 msgid "Country:"
 msgstr "Kraj:"
 
-#: poznanopen/templates/registration.html:40
-msgid "WCA i.d. (optional):"
-msgstr "ID WCA (opcjonalne):"
+#: poznanopen/templates/registration.html:55
+msgid "WCA i.d.:"
+msgstr "ID WCA:"
 
-#: poznanopen/templates/registration.html:44
-msgid "E-mail (optional):"
-msgstr "E-mail (opcjonalne):"
+#: poznanopen/templates/registration.html:60
+msgid ""
+"\n"
+"This field is optional. If you've competed in WCA-approved competitions "
+"before, you're likely to have your own\n"
+"WCA-id. You can then watch your stats on the World Cube Association's "
+"pages.\n"
+msgstr ""
+"\n"
+"To pole jest opcjonalne. Jeżeli startowałeś już w oficjalnych zawodach, "
+"dysponujesz również oficjalnym identyfikatorem WCA, który możesz umieścić w "
+"tym polu.\n"
 
-#: poznanopen/templates/registration.html:48
+#: poznanopen/templates/registration.html:68
+msgid "E-mail:"
+msgstr ""
+
+#: poznanopen/templates/registration.html:78
+msgid ""
+"\n"
+"This field is optional.\n"
+msgstr ""
+"\n"
+"To pole jest opcjonalne.\n"
+
+#: poznanopen/templates/registration.html:85
+msgid "T-shirt size:"
+msgstr "Rozmiar koszulki:"
+
+#: poznanopen/templates/registration.html:89
 msgid "Events:"
 msgstr "Uczestnictwo w:"
 
-#: poznanopen/templates/registration.html:50
+#: poznanopen/templates/registration.html:91
 msgid "Rubik's Cube"
-msgstr "Kostka Rubika"
+msgstr ""
 
-#: poznanopen/templates/registration.html:51
+#: poznanopen/templates/registration.html:92
 msgid "Rubik's Cube one-handed"
-msgstr "Kostka Rubika jedną ręką"
+msgstr ""
 
-#: poznanopen/templates/registration.html:52
+#: poznanopen/templates/registration.html:93
 msgid "Rubik's Cube blindfolded"
-msgstr "Kostka Rubika blindfolded"
+msgstr ""
 
-#: poznanopen/templates/registration.html:53
+#: poznanopen/templates/registration.html:94
 msgid "Rubik's Cube Fewest-Moves"
-msgstr "Najmniejsza liczba ruchów"
+msgstr ""
 
-#: poznanopen/templates/registration.html:57
+#: poznanopen/templates/registration.html:98
 msgid "2&times;2&times;2 Cube"
-msgstr "Kostka 2&times;2&times;2"
+msgstr ""
 
-#: poznanopen/templates/registration.html:58
+#: poznanopen/templates/registration.html:99
 msgid "4&times;4&times;4 Cube"
-msgstr "Kostka 4&times;4&times;4"
+msgstr ""
 
-#: poznanopen/templates/registration.html:59
+#: poznanopen/templates/registration.html:100
 msgid "5&times;5&times;5 Cube"
-msgstr "Kostka 5&times;5&times;5"
+msgstr ""
 
-#: poznanopen/templates/registration.html:60
+#: poznanopen/templates/registration.html:101
 msgid "6&times;6&times;6 Cube"
-msgstr "Kostka 6&times;6&times;6"
+msgstr ""
 
-#: poznanopen/templates/registration.html:61
+#: poznanopen/templates/registration.html:102
 msgid "7&times;7&times;7 Cube"
-msgstr "Kostka 7&times;7&times;7"
+msgstr ""
 
-#: poznanopen/templates/registration.html:64
+#: poznanopen/templates/registration.html:105
 msgid "Square-1"
 msgstr ""
 
-#: poznanopen/templates/registration.html:65
+#: poznanopen/templates/registration.html:106
 msgid "Pyraminx"
 msgstr ""
 
-#: poznanopen/templates/registration.html:66
+#: poznanopen/templates/registration.html:107
 msgid "Megaminx"
 msgstr ""
 
-#: poznanopen/templates/registration.html:67
+#: poznanopen/templates/registration.html:108
 msgid "Rubik's Clock"
 msgstr ""
 
-#: poznanopen/templates/registration.html:74
+#: poznanopen/templates/registration.html:112
+msgid "Parents' consent"
+msgstr "Zgoda rodzicielska"
+
+#: poznanopen/templates/registration.html:115
 msgid ""
 "\n"
 "        In case your are aged 17 or less, you need your parents' (or lawful "
 "guardian) written consent to compete in\n"
-"        Poznan Open 09. You can use the template below:\n"
+"        Poznan Open 09.\n"
 "        <blockquote>\n"
-"            Gimme my son all the trophies, bastards!\n"
 "        </blockquote>\n"
 "        "
 msgstr ""
+"\n"
+"Jeżeli jesteś osobą niepełnoletnią, <b>wymagamy</b> od Ciebie pisemnej zgody "
+"rodzica bądź prawnego opiekuna na uczestnictwo w zawodach. Zapytamy o nią "
+"podczas wydawania identyfikatorów w czasie zawodów."
+
+#: poznanopen/templates/registration.html:126
+msgid "Send your registration form"
+msgstr "Wyślij formularz rejestracyjny"
 
 #: poznanopen/templates/skel.html:3
 msgid ""
@@ -876,13 +1023,30 @@ msgstr ""
 msgid "Sponsors"
 msgstr "Sponsorzy"
 
-#: poznanopen/templates/skel.html:30
-msgid "Contact"
-msgstr "Kontakt"
+#: poznanopen/templates/thanks.html:4
+msgid "Thanks for your time"
+msgstr "Dziękujemy za poświęcony czas"
+
+#: poznanopen/templates/thanks.html:6
+msgid ""
+"Your data will be verified and then added to our database. In the meanwhile, "
+"check out <a href=\"/competitors\">already registered participants</a>."
+msgstr ""
+"Twoje dane zostały zgłoszone do zatwierdzenia przez zespół organizacyjny. "
+"Potrwa to kilka godzin. W międzyczasie, sprawdź <a href=\"/competitors"
+"\">listę zarejestrowanych zawodników</a>."
+
+#: poznanopen/templates/venue.html:6
+msgid "Poznan Open 09 is held at:"
+msgstr "Poznań Open 09 odbywa się w:"
+
+#: poznanopen/templates/venue.html:14
+msgid "Map"
+msgstr "Mapa"
 
 #: registration/forms.py:38
 msgid "email address"
-msgstr ""
+msgstr "adres e-mail"
 
 #: registration/forms.py:40
 msgid "password"
@@ -927,3 +1091,47 @@ msgstr ""
 #: registration/models.py:228
 msgid "registration profiles"
 msgstr ""
+
+#~ msgid ""
+#~ "\n"
+#~ "This field is optional. If you're willing in our accomodation offer (see "
+#~ "below), it is\n"
+#~ "mandratory, though.\n"
+#~ msgstr ""
+#~ "\n"
+#~ "To pole jest opcjonalne. UWAGA! W wypadku zainteresowania możliwością "
+#~ "zakwaterowania, koniecznie podaj swój adres e-mail. Bez tego nie będziemy "
+#~ "w stanie się z Tobą skontakować.\n"
+
+#~ msgid "Accomodation:"
+#~ msgstr "Zakwaterowanie:"
+
+#~ msgid ""
+#~ "\n"
+#~ "Lots of people will probably search for accomodation for the time of the "
+#~ "competition.\n"
+#~ "We can suggest an excellent <a href=\"http://www.artesya.pl/\">Artesya "
+#~ "Hotel</a> with reasonable\n"
+#~ "prices. If you'd like, we can order a place for you, with a possible "
+#~ "discount. If you express\n"
+#~ "an interest in this offer, we will contact you by e-mail a few weeks "
+#~ "before Poznan Open 09,\n"
+#~ "in order to consult further details.\n"
+#~ msgstr ""
+#~ "\n"
+#~ "Poznań Open 09 trwa dwa dni, co stwarza problem zakwaterowania na czas "
+#~ "zawodów. Sugerujemy <a href=\"http://www.artesya.pl/\">Artesya Hotel</a>, "
+#~ "oferujący dobrą jakość za niskie stawki. W przypadku szerszego "
+#~ "zainteresowania możemy postarać się o grupowe, tańsze zamówienie. Jeżeli "
+#~ "jesteś zainteresowany, zaznacz to pole oraz podaj swój adres e-mail w "
+#~ "polu wyżej, a skontaktujemy się z tobą na dwa tygodnie przed zawodami, by "
+#~ "ustalić szczegóły.\n"
+
+#~ msgid "News"
+#~ msgstr "Nowości"
+
+#~ msgid "Welcome to the newly opened, official website of Poznań Open 09."
+#~ msgstr "Witajcie na świeżo otwartej stronie Poznań Open 09."
+
+#~ msgid "E-mail (optional):"
+#~ msgstr "E-mail (opcjonalne):"

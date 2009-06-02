@@ -8,6 +8,7 @@ from google.appengine.ext import db
 from django.conf import settings
 from ragendja.auth.decorators import staff_only
 import datetime
+from collections import defaultdict
 
 def index(request):
     return render_to_response('index.html', {'page': 'home'})
@@ -23,6 +24,8 @@ def registration(request):
             model.country = data['country']
             model.city = data['city']
             model.email = data['email']
+            model.tshirt = data['tshirt']
+            model.nick = data['nick']
             model.accomodation = data['accomodation']
             model.born = datetime.date(int(data['bornyear']), int(data['bornmonth']), int(data['bornday']))
             model.events = [str(ev) for ev in data if ev.startswith('ev_') and data[ev] == True]
@@ -41,6 +44,28 @@ def registration(request):
         'days': range(1, 32),
         })
 
+def admin(request):
+    user = users.get_current_user()
+    if not (user and users.is_current_user_admin()):
+        return HttpResponseRedirect(users.create_login_url('/admin'))
+
+    if request.method == 'POST' and request.POST['id'] and request.POST['action']:
+        id = request.POST['id']
+        action = int(request.POST['action'])
+        model = Form.get(id)
+
+        model.status = action
+        model.put()
+
+    pending = []
+    accepted = []
+    rejected = []
+    
+    for x in db.GqlQuery("SELECT * FROM poznanopen_form"):
+        { 1:pending, 2: accepted, 3: rejected }[x.status].append(x)
+
+    return render_to_response('admin.html', {'page': 'admin', 'pending': pending, 'accepted': accepted, 'rejected': rejected})
+
 def news(request, id = None):
     if news:
         pass
@@ -48,7 +73,7 @@ def news(request, id = None):
         return render_to_response('news.html', {'page': 'news', 'news': news})
 
 def gallery(request):
-    pass
+    return render_to_response('gallery.html', {'page': 'gallery'})
 
 def venue(request):
     return render_to_response('venue.html', {'page': 'venue'})
@@ -66,8 +91,10 @@ def thanks(request):
     return render_to_response('thanks.html', {'page': 'thanks'})
 
 class Mapper:
-    def __init__(self, model):
+    def __init__(self, model, counter):
         self.model = model
+        for ev in self.model.events:
+            counter[ev] += 1
 
     def __getattr__(self, attr):
         if attr == '__getitem__':
@@ -78,9 +105,11 @@ class Mapper:
             return getattr(self.model, attr)
 
 def competitors(request):
-    query = (Mapper(x) for x in db.GqlQuery("SELECT * FROM poznanopen_form WHERE status = 2"))
+    counter = defaultdict(int)
+    query = [Mapper(x, counter) for x in db.GqlQuery("SELECT * FROM poznanopen_form WHERE status = 2")]
+    query.sort(key = lambda x : x.fullname.rsplit(' ', 2)[-1])
 
-    return render_to_response('competitors.html', {'competitors': query})
+    return render_to_response('competitors.html', {'competitors': query, 'summary': counter})
 
     
 

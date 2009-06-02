@@ -1,0 +1,93 @@
+{% extends "skel.html" %}
+{% block content %}
+<div class="grid_16"><h1>Admin panel</h1></div>
+
+<div class="clear">&nbsp;</div>
+<div class="grid_16"><h1>Pending</h1></div>
+<div class="clear">&nbsp;</div>
+
+{% for cmptr in pending %}
+<div class="grid_4">{{ cmptr.fullname }}</div>
+<div class="grid_3">{{ cmptr.wcaid }}</div>
+<div class="grid_3">{{ cmptr.born }}</div>
+<div class="grid_3">{{ cmptr.city }}</div>
+<div class="grid_2">{{ cmptr.country }}</div>
+<div class="grid_1">
+    <form action="/admin" method="POST">
+        <input type="hidden" name="action" value="2" />
+        <input type="hidden" name="id" value="{{ cmptr.id }}" />
+        <input type="submit" value="Accept" />
+    </form>
+    </div>
+<div class="clear">&nbsp;</div>
+<div class="grid_4">{{ cmptr.email }}</div>
+<div class="grid_3">{{ cmptr.tshirt }}</div>
+<div class="grid_8">{{ cmptr.events }}</div>
+<div class="grid_1">
+    <form action="/admin" method="POST">
+        <input type="hidden" name="action" value="3" />
+        <input type="hidden" name="id" value="{{ cmptr.id }}" />
+        <input type="submit" value="Reject" />
+    </form>
+</div>
+<div class="clear" style="height: 25px;">&nbsp;</div>
+{% endfor %}
+<div class="grid_16"><h1>Accepted</h1></div>
+<div class="clear">&nbsp;</div>
+
+{% for cmptr in accepted %}
+<div class="grid_4">{{ cmptr.fullname }}</div>
+<div class="grid_3">{{ cmptr.wcaid }}</div>
+<div class="grid_3">{{ cmptr.born }}</div>
+<div class="grid_3">{{ cmptr.city }}</div>
+<div class="grid_2">{{ cmptr.country }}</div>
+<div class="grid_1">
+    <form action="/admin" method="POST">
+        <input type="hidden" name="action" value="1" />
+        <input type="hidden" name="id" value="{{ cmptr.id }}" />
+        <input type="submit" value="To Pending" />
+    </form>
+    </div>
+<div class="clear">&nbsp;</div>
+<div class="grid_4">{{ cmptr.email }}</div>
+<div class="grid_3">{{ cmptr.tshirt }}</div>
+<div class="grid_8">{{ cmptr.events }}</div>
+<div class="grid_1">
+    <form action="/admin" method="POST">
+        <input type="hidden" name="action" value="3" />
+        <input type="hidden" name="id" value="{{ cmptr.id }}" />
+        <input type="submit" value="Reject" />
+    </form>
+</div>
+<div class="clear" style="height: 25px;">&nbsp;</div>
+{% endfor %}
+<div class="grid_16"><h1>Rejected</h1></div>
+<div class="clear">&nbsp;</div>
+
+{% for cmptr in rejected %}
+<div class="grid_4">{{ cmptr.fullname }}</div>
+<div class="grid_3">{{ cmptr.wcaid }}</div>
+<div class="grid_3">{{ cmptr.born }}</div>
+<div class="grid_3">{{ cmptr.city }}</div>
+<div class="grid_2">{{ cmptr.country }}</div>
+<div class="grid_1">
+    <form action="/admin" method="POST">
+        <input type="hidden" name="action" value="1" />
+        <input type="hidden" name="id" value="{{ cmptr.id }}" />
+        <input type="submit" value="To Pending" />
+    </form>
+    </div>
+<div class="clear">&nbsp;</div>
+<div class="grid_4">{{ cmptr.email }}</div>
+<div class="grid_3">{{ cmptr.tshirt }}</div>
+<div class="grid_8">{{ cmptr.events }}</div>
+<div class="grid_1">
+    <form action="/admin" method="POST">
+        <input type="hidden" name="action" value="2" />
+        <input type="hidden" name="id" value="{{ cmptr.id }}" />
+        <input type="submit" value="Accept" />
+    </form>
+</div>
+<div class="clear" style="height: 25px;">&nbsp;</div>
+{% endfor %}
+{% endblock %}
