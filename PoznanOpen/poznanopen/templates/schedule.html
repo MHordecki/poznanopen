@@ -1,0 +1,31 @@
+{% extends "skel.html" %}
+{% block content %}
+<div class="grid_16">
+    <h1>Schedule</h1>
+</div>
+<div class="clear">&nbsp;</div>
+
+<div class="grid_16">
+    <h2>{% trans "Saturday" %}</h2>
+</div>
+<div class="clear">&nbsp;</div>
+
+{% for time, event in saturday %}
+<div class="grid_2">{{ time }}</div>
+<div class="grid_1">&nbsp;</div>
+<div class="grid_13">{{ event }}</div>
+<div class="clear">&nbsp;</div>
+{% endfor %}
+
+<div class="grid_16">
+    <h2>{% trans "Sunday" %}</h2>
+</div>
+<div class="clear">&nbsp;</div>
+
+{% for time, event in sunday %}
+<div class="grid_2">{{ time }}</div>
+<div class="grid_1">&nbsp;</div>
+<div class="grid_13">{{ event }}</div>
+<div class="clear">&nbsp;</div>
+{% endfor %}
+{% endblock %}

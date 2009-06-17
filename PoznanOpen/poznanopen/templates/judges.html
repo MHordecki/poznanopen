@@ -1,0 +1,73 @@
+{% extends "skel.html" %}
+{% block content %}
+<div class="grid_16">
+    <h1>{% trans "Judges" %}</h1>
+
+    <p>
+    <table>
+        <tr>
+            <th>&nbsp;</th>
+            <th>{% trans "Full name" %}</th>
+            <th>{% trans "City" %}</th>
+            <th>{% trans "Country" %}</th>
+            <th>{% trans "WCA" %}</th>
+            <th>{% trans "3&times;3&times;3" %}</th>
+            <th>{% trans "3&times;3&times;3 OH" %}</th>
+            <th>{% trans "3&times;3&times;3 BLD" %}</th>
+            <th>{% trans "3&times;3&times;3 FM" %}</th>
+            <th>{% trans "2&times;2&times;2" %}</th>
+            <th>{% trans "4&times;4&times;4" %}</th>
+            <th>{% trans "5&times;5&times;5" %}</th>
+            <th>{% trans "6&times;6&times;6" %}</th>
+            <th>{% trans "7&times;7&times;7" %}</th>
+            <th>{% trans "sq1" %}</th>
+            <th>{% trans "pyr" %}</th>
+            <th>{% trans "minx" %}</th>
+            <th>{% trans "clock" %}</th>
+        </tr>
+        {% for competitor in competitors %}
+        <tr class="{% cycle "tr_odd" "tr_even" %}">
+            <td>{{ forloop.counter }}</td>
+            <td>{{ competitor.fullname }}</td>
+            <td>{{ competitor.city }}</td>
+            <td>{{ competitor.country }}</td>
+            <td>{% if competitor.wcaid %}<a href="http://www.worldcubeassociation.org/results/p.php?i={{ competitor.wcaid }}"><img src="/media/wca.ico" border="0"/></a>{% else %}-{% endif %}</td>
+            <td>{% if competitor.ev_333 %}X{% endif %}</td>
+            <td>{% if competitor.ev_333oh %}X{% endif %}</td>
+            <td>{% if competitor.ev_333bld %}X{% endif %}</td>
+            <td>{% if competitor.ev_333fm %}X{% endif %}</td>
+            <td>{% if competitor.ev_222 %}X{% endif %}</td>
+            <td>{% if competitor.ev_444 %}X{% endif %}</td>
+            <td>{% if competitor.ev_555 %}X{% endif %}</td>
+            <td>{% if competitor.ev_666 %}X{% endif %}</td>
+            <td>{% if competitor.ev_777 %}X{% endif %}</td>
+            <td>{% if competitor.ev_sq1 %}X{% endif %}</td>
+            <td>{% if competitor.ev_pyr %}X{% endif %}</td>
+            <td>{% if competitor.ev_minx %}X{% endif %}</td>
+            <td>{% if competitor.ev_clock %}X{% endif %}</td>
+        </tr>
+        {% endfor %}
+        {% if competitors %}
+
+        <tr class="tr_summary">
+            <td colspan="5" class="tr_summary">{% trans "Summary" %}</th>
+            <td>{{ summary.ev_333 }}</td>
+            <td>{{ summary.ev_333oh }}</td>
+            <td>{{ summary.ev_333bld }}</td>
+            <td>{{ summary.ev_333fm }}</td>
+            <td>{{ summary.ev_222 }}</td>
+            <td>{{ summary.ev_444 }}</td>
+            <td>{{ summary.ev_555 }}</td>
+            <td>{{ summary.ev_666 }}</td>
+            <td>{{ summary.ev_777 }}</td>
+            <td>{{ summary.ev_sq1 }}</td>
+            <td>{{ summary.ev_pyr }}</td>
+            <td>{{ summary.ev_minx }}</td>
+            <td>{{ summary.ev_clock }}</td>
+        </tr>
+        {% endif %}
+    </table>
+    </p>
+    
+    </div>
+{% endblock %}

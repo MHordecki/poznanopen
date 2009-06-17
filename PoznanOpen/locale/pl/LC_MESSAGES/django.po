@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-06-01 14:38-0500\n"
+"POT-Creation-Date: 2009-06-15 23:11-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -749,39 +749,39 @@ msgid "WCA"
 msgstr "WCA"
 
 #: poznanopen/templates/competitors.html:14
-msgid "3x3x3"
+msgid "3&times;3&times;3"
 msgstr ""
 
 #: poznanopen/templates/competitors.html:15
-msgid "3x3x3 OH"
+msgid "3&times;3&times;3 OH"
 msgstr ""
 
 #: poznanopen/templates/competitors.html:16
-msgid "3x3x3 BLD"
+msgid "3&times;3&times;3 BLD"
 msgstr ""
 
 #: poznanopen/templates/competitors.html:17
-msgid "3x3x3 FM"
+msgid "3&times;3&times;3 FM"
 msgstr ""
 
 #: poznanopen/templates/competitors.html:18
-msgid "2x2x2"
+msgid "2&times;2&times;2"
 msgstr ""
 
 #: poznanopen/templates/competitors.html:19
-msgid "4x4x4"
+msgid "4&times;4&times;4"
 msgstr ""
 
 #: poznanopen/templates/competitors.html:20
-msgid "5x5x5"
+msgid "5&times;5&times;5"
 msgstr ""
 
 #: poznanopen/templates/competitors.html:21
-msgid "6x6x6"
+msgid "6&times;6&times;6"
 msgstr ""
 
 #: poznanopen/templates/competitors.html:22
-msgid "7x7x7"
+msgid "7&times;7&times;7"
 msgstr ""
 
 #: poznanopen/templates/competitors.html:23
@@ -840,8 +840,8 @@ msgstr ""
 "Poznaniu."
 
 #: poznanopen/templates/index.html:14
-msgid "Registration starts tommorow, 1st of June!"
-msgstr "Rejestracja rozpoczyna się 1 czerwca!"
+msgid "Register now - deadline is 16th of June!"
+msgstr ""
 
 #: poznanopen/templates/index.html:21 poznanopen/templates/venue.html:4
 msgid "Venue"
@@ -1091,6 +1091,9 @@ msgstr ""
 #: registration/models.py:228
 msgid "registration profiles"
 msgstr ""
+
+#~ msgid "Registration starts tommorow, 1st of June!"
+#~ msgstr "Rejestracja rozpoczyna się 1 czerwca!"
 
 #~ msgid ""
 #~ "\n"

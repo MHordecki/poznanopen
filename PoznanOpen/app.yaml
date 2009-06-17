@@ -1,5 +1,5 @@
 ﻿application: poznanopen09
-version: 1
+version: dev
 runtime: python
 api_version: 1
 
