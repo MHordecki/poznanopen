@@ -79,7 +79,7 @@ def gallery(request):
 def venue(request):
     return render_to_response('venue.html', {'page': 'venue'})
 
-def contact(request):
+def team(request):
     return render_to_response('contact.html', {'page': 'contact'})
 
 def schedule(request):
