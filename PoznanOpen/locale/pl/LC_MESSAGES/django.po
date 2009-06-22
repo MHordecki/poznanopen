@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-06-15 23:11-0500\n"
+"POT-Creation-Date: 2009-06-20 23:50-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -728,92 +728,280 @@ msgstr ""
 msgid "Email address"
 msgstr ""
 
-#: poznanopen/templates/competitors.html:4 poznanopen/templates/index.html:35
+#: poznanopen/views.py:86
+msgid "Official opening ceremony"
+msgstr "Oficjalne otwarcie"
+
+#: poznanopen/views.py:87
+msgid "Rubik's Cube - first round (average of 5) - 20 advance to the semifinal"
+msgstr "Rubik's Cube - pierwsza runda (average of 5) - 20 osób awansuje do półfinału"
+
+#: poznanopen/views.py:88
+msgid "Rubik's Cube Fewest Moves - first round - 7 advance to the final round"
+msgstr "Rubik's Cube Fewest Moves - pierwsza runda - 7 osób awansuje do finału"
+
+#: poznanopen/views.py:89
+msgid ""
+"4x4x4 Cube - combined first round (best of 2 sub-90sec -> average of 5) - 15 "
+"advance to the semifinal"
+msgstr ""
+"4x4x4 - pierwsza runda kombinowana (best of 2 sub-90sec -> average of 5) - 15 "
+"osób awansuje do półfinału"
+
+#: poznanopen/views.py:90
+msgid ""
+"Square-1 - combined first round (best of 2 sub-90sec -> average of 5) - 10 "
+"advance to the semifinal"
+msgstr ""
+"Square-1 - pierwsza runda kombinowana (best of 2 sub-90sec -> average of 5) - 10 "
+"osób awansuje do półfinału"
+
+#: poznanopen/views.py:91
+msgid ""
+"5x5x5 Cube - combined first round (best of 2 sub-140sec -> average of 5) - 7 "
+"advance to the final"
+msgstr ""
+"5x5x5 - pierwsza runda kombinowana (best of 2 sub-140sec -> average of 5) - 7 "
+"osób awansuje do finału"
+
+#: poznanopen/views.py:92
+msgid "2x2x2 Cube - first round (average of 5) - 20 advance to the semifinal"
+msgstr "2x2x2 - pierwsza runda (average of 5) - 20 osób awansuje do półfinału"
+
+#: poznanopen/views.py:93
+msgid ""
+"Rubik's Cube One-handed - combined first round (best of 2 sub-50sec -> "
+"average of 5) - 15 advance to the semifinal"
+msgstr ""
+"Rubik's Cube One-handed - pierwsza runda kombinowana (best of 2 sub-50sec -> "
+"average of 5) - 15 osób awansuje do półfinału"
+
+#: poznanopen/views.py:94 poznanopen/views.py:112
+msgid "Break"
+msgstr "Przerwa"
+
+#: poznanopen/views.py:95
+msgid ""
+"Rubik's Clock - combined first round (best of 2 sub-30s -> average of 5) - 5 "
+"advance to the final"
+msgstr ""
+"Rubik's Clock - pierwsza runda kombinowana (best of 2 sub-30s -> average of 5) - 5 "
+"osób awansuje do finału"
+
+#: poznanopen/views.py:96
+msgid ""
+"Pyraminx - combined first round (best of 2 sub-20sec -> average of 5) - 7 "
+"advance to the final"
+msgstr ""
+"Pyraminx - pierwsza runda kombinowana (best of 2 sub-20sec -> average of 5) - 7 "
+"osób awansuje do finału"
+
+#: poznanopen/views.py:97
+msgid "6x6x6 Cube - combined final (best of 2 sub-300sec -> mean of 3)"
+msgstr "6x6x6 - finał kombinowany (best of 2 sub-300sec -> mean of 3)"
+
+#: poznanopen/views.py:98
+msgid "7x7x7 Cube - combined final (best of 2 sub-420sec -> mean of 3)"
+msgstr "7x7x7 - finał kombinowany (best of 2 sub-420sec -> mean of 3)"
+
+#: poznanopen/views.py:99
+msgid "Rubik's Cube Knock-Out - unofficial event"
+msgstr "Rubik's Cube Knock-Out - konkurencja nieoficjalna"
+
+#: poznanopen/views.py:101
+msgid "Rubik's Cube Fewest Moves - final"
+msgstr "Rubik's Cube Fewest Moves - finał"
+
+#: poznanopen/views.py:102
+msgid ""
+"Rubik's Cube Blindfolded - first round (best of 2, total time limit: 8 "
+"minutes) - 7 advance to the final"
+msgstr ""
+"Rubik's Cube Blindfolded - pierwsza runda (best of 2, total time limit: 8 "
+"minutes) - 7 osób awansuje do finału"
+
+#: poznanopen/views.py:103
+msgid "Rubik's Cube - semifinal (average of 5) - 10 advance to the final"
+msgstr "Rubik's Cube - półfinał (average of 5) - 10 osób awansuje do finału"
+
+#: poznanopen/views.py:104
+msgid "Square-1 - semifinal (average of 5) - 5 advance to the final"
+msgstr "Square-1 - półfinał (average of 5) - 5 osób awansuje do finału"
+
+#: poznanopen/views.py:105
+msgid "Megaminx - combined final (best of 2 sub-180s -> mean of 3)"
+msgstr "Megaminx - finał kombinowany (best of 2 sub-180s -> mean of 3)"
+
+#: poznanopen/views.py:106
+msgid "2x2x2 Cube - semifinal (average of 5) - 10 advance to the final"
+msgstr "2x2x2 - półfinał (average of 5) - 10 osób awansuje do finału"
+
+#: poznanopen/views.py:107
+msgid "Rubik's Clock - final (average of 5)"
+msgstr "Rubik's Clock - finał (average of 5)"
+
+#: poznanopen/views.py:108
+msgid "4x4x4 Cube - semifinal (average of 5) - 7 advance to the final"
+msgstr "4x4x4 - półfinał (average of 5) - 7 osób awansuje do finału"
+
+#: poznanopen/views.py:109
+msgid ""
+"Rubik's Cube One-handed - semifinal (average of 5) - 7 advance to the final"
+msgstr ""
+"Rubik's Cube One-handed - półfinał (average of 5) - 7 osób awansuje do finału"
+
+#: poznanopen/views.py:110
+msgid "Pyraminx - final (average of 5)"
+msgstr "Pyraminx - finał (average of 5)"
+
+#: poznanopen/views.py:111
+msgid "Rubik's Cube Team Solving - unofficial event"
+msgstr "Rubik's Cube Team Solving - konkurencja nieoficjalna"
+
+#: poznanopen/views.py:113
+msgid "Square-1 - final (average of 5)"
+msgstr "Square-1 - finał (average of 5)"
+
+#: poznanopen/views.py:114
+msgid "Rubik's Cube Blindfolded - final (best of 3)"
+msgstr "Rubik's Cube Blindfolded - finał (best of 3)"
+
+#: poznanopen/views.py:115
+msgid "5x5x5 Cube - final (average of 5)"
+msgstr "5x5x5 - finał (average of 5)"
+
+#: poznanopen/views.py:116
+msgid "2x2x2 Cube - final (average of 5)"
+msgstr "2x2x2 - finał (average of 5)"
+
+#: poznanopen/views.py:117
+msgid "Rubik's Cube One-handed - final (average of 5)"
+msgstr "Rubik's Cube One-handed - finał (average of 5)"
+
+#: poznanopen/views.py:118
+msgid "4x4x4 Cube - final (average of 5)"
+msgstr "4x4x4 Cube - finał (average of 5)"
+
+#: poznanopen/views.py:119
+msgid "Rubik's Cube - final (average of 5)"
+msgstr "Rubik's Cube - finał (average of 5)"
+
+#: poznanopen/views.py:120
+msgid "Closing ceremony"
+msgstr "Rozdanie nagród; zakończenie imprezy"
+
+#: poznanopen/templates/competitors.html:4 poznanopen/templates/index.html:36
 msgid "Competitors"
 msgstr "Zawodnicy"
 
 #: poznanopen/templates/competitors.html:10
+#: poznanopen/templates/judges.html:10
 msgid "Full name"
 msgstr "Imię i nazwisko"
 
 #: poznanopen/templates/competitors.html:11
+#: poznanopen/templates/judges.html:11
 msgid "City"
 msgstr "Miasto"
 
 #: poznanopen/templates/competitors.html:12
+#: poznanopen/templates/judges.html:12
 msgid "Country"
 msgstr "Kraj"
 
 #: poznanopen/templates/competitors.html:13
+#: poznanopen/templates/judges.html:13
 msgid "WCA"
 msgstr "WCA"
 
 #: poznanopen/templates/competitors.html:14
+#: poznanopen/templates/judges.html:14
 msgid "3&times;3&times;3"
 msgstr ""
 
 #: poznanopen/templates/competitors.html:15
+#: poznanopen/templates/judges.html:15
 msgid "3&times;3&times;3 OH"
 msgstr ""
 
 #: poznanopen/templates/competitors.html:16
+#: poznanopen/templates/judges.html:16
 msgid "3&times;3&times;3 BLD"
 msgstr ""
 
 #: poznanopen/templates/competitors.html:17
+#: poznanopen/templates/judges.html:17
 msgid "3&times;3&times;3 FM"
 msgstr ""
 
 #: poznanopen/templates/competitors.html:18
+#: poznanopen/templates/judges.html:18
 msgid "2&times;2&times;2"
 msgstr ""
 
 #: poznanopen/templates/competitors.html:19
+#: poznanopen/templates/judges.html:19
 msgid "4&times;4&times;4"
 msgstr ""
 
 #: poznanopen/templates/competitors.html:20
+#: poznanopen/templates/judges.html:20
 msgid "5&times;5&times;5"
 msgstr ""
 
 #: poznanopen/templates/competitors.html:21
+#: poznanopen/templates/judges.html:21
 msgid "6&times;6&times;6"
 msgstr ""
 
 #: poznanopen/templates/competitors.html:22
+#: poznanopen/templates/judges.html:22
 msgid "7&times;7&times;7"
 msgstr ""
 
 #: poznanopen/templates/competitors.html:23
+#: poznanopen/templates/judges.html:23
 msgid "sq1"
 msgstr ""
 
 #: poznanopen/templates/competitors.html:24
+#: poznanopen/templates/judges.html:24
 msgid "pyr"
 msgstr ""
 
 #: poznanopen/templates/competitors.html:25
+#: poznanopen/templates/judges.html:25
 msgid "minx"
 msgstr ""
 
 #: poznanopen/templates/competitors.html:26
+#: poznanopen/templates/judges.html:26
 msgid "clock"
 msgstr ""
 
 #: poznanopen/templates/competitors.html:53
+#: poznanopen/templates/judges.html:53
 msgid "Summary"
 msgstr "Podsumowanie"
 
-#: poznanopen/templates/contact.html:4 poznanopen/templates/skel.html:30
-msgid "Contact"
-msgstr "Kontakt"
+#: poznanopen/templates/contact.html:5
+msgid "Judge team"
+msgstr "Sędziowie"
 
-#: poznanopen/templates/contact.html:6
+#: poznanopen/templates/contact.html:7
+msgid "WCA delegate"
+msgstr "Delegat WCA"
+
+#: poznanopen/templates/contact.html:13
+msgid "Events' main judges"
+msgstr "Sędziowie główni"
+
+#: poznanopen/templates/contact.html:44
 msgid ""
 "In case of any questions, doubts, or just plain curiosity, e-mail us at:"
 msgstr "W razie jakichkolwiek pytań skontaktuj się z organizatorem zawodów:"
 
-#: poznanopen/templates/gallery.html:4 poznanopen/templates/index.html:30
+#: poznanopen/templates/gallery.html:4 poznanopen/templates/index.html:31
 msgid "Gallery"
 msgstr "Galeria"
 
@@ -840,8 +1028,8 @@ msgstr ""
 "Poznaniu."
 
 #: poznanopen/templates/index.html:14
-msgid "Register now - deadline is 16th of June!"
-msgstr ""
+msgid "Registration starts tommorow, 1st of June!"
+msgstr "Rejestracja rozpoczyna się 1 czerwca!"
 
 #: poznanopen/templates/index.html:21 poznanopen/templates/venue.html:4
 msgid "Venue"
@@ -853,30 +1041,32 @@ msgid ""
 "Poznań, near all major transit junctions."
 msgstr "Poznań Open jest ulokowane nieopodal centrum, blisko Dworca Głównego."
 
-#: poznanopen/templates/index.html:23 poznanopen/templates/index.html.py:32
-#: poznanopen/templates/index.html:37
+#: poznanopen/templates/index.html:23 poznanopen/templates/index.html.py:28
+#: poznanopen/templates/index.html:33 poznanopen/templates/index.html.py:38
 msgid "More.."
 msgstr "Więcej.."
 
-#: poznanopen/templates/index.html:26
+#: poznanopen/templates/index.html:26 poznanopen/templates/skel.html:28
 msgid "Schedule"
 msgstr "Harmonogram"
 
 #: poznanopen/templates/index.html:27
-msgid "We're in the process of finalizing our schedule. Stay tuned!"
-msgstr ""
-"Jesteśmy w trakcie finalizowania naszego harmonogramu. Więcej informacji "
-"wkrótce."
+msgid "Check out our finalized schedule."
+msgstr "Sprawdź ostateczny harmonogram!"
 
-#: poznanopen/templates/index.html:31
+#: poznanopen/templates/index.html:32
 msgid "In the meanwhile, enjoy photos from Poznan Open 08."
 msgstr "Obejrzyj zdjęcia z pierwszej edycji - Poznań Open 08!"
 
-#: poznanopen/templates/index.html:36
+#: poznanopen/templates/index.html:37
 msgid "See who has registered so far."
 msgstr "Zobacz, kto się do tej pory zarejestrował."
 
-#: poznanopen/templates/registration.html:4 poznanopen/templates/skel.html:24
+#: poznanopen/templates/judges.html:4
+msgid "Judges"
+msgstr "Sędziowie"
+
+#: poznanopen/templates/registration.html:4 poznanopen/templates/skel.html:25
 msgid "Registration"
 msgstr "Rejestracja"
 
@@ -1012,6 +1202,15 @@ msgstr ""
 msgid "Send your registration form"
 msgstr "Wyślij formularz rejestracyjny"
 
+#: poznanopen/templates/schedule.html:9
+msgid "Saturday"
+msgstr "Sobota"
+
+#: poznanopen/templates/schedule.html:21
+#, fuzzy
+msgid "Sunday"
+msgstr "Niedziela"
+
 #: poznanopen/templates/skel.html:3
 msgid ""
 "Poznan Open 09 - Open Poznan Championships in Speedsolving the Rubik's Cube"
@@ -1019,9 +1218,9 @@ msgstr ""
 "Poznań Open 09 - Otwarte Mistrzostwa Miasta Poznania w układaniu Kostki "
 "Rubika"
 
-#: poznanopen/templates/skel.html:27
-msgid "Sponsors"
-msgstr "Sponsorzy"
+#: poznanopen/templates/skel.html:31
+msgid "Team"
+msgstr "Kontakt"
 
 #: poznanopen/templates/thanks.html:4
 msgid "Thanks for your time"
@@ -1092,8 +1291,16 @@ msgstr ""
 msgid "registration profiles"
 msgstr ""
 
-#~ msgid "Registration starts tommorow, 1st of June!"
-#~ msgstr "Rejestracja rozpoczyna się 1 czerwca!"
+#~ msgid "Contact"
+#~ msgstr "Kontakt"
+
+#~ msgid "We're in the process of finalizing our schedule. Stay tuned!"
+#~ msgstr ""
+#~ "Jesteśmy w trakcie finalizowania naszego harmonogramu. Więcej informacji "
+#~ "wkrótce."
+
+#~ msgid "Sponsors"
+#~ msgstr "Sponsorzy"
 
 #~ msgid ""
 #~ "\n"
